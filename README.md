@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Proyecto de predicción meteorológica Climatool
+# Proyecto de predicción de variables climáticas 
 
 Sistema de pronóstico meteorológico y detección de anomalías desarrollado con Python y Machine Learning. El proyecto integra un flujo de ingeniería de datos para recopilar y procesar información histórica, entrenar modelos predictivos y visualizar los resultados mediante una interfaz web construida con Streamlit.
 
@@ -25,7 +24,7 @@ El sistema trabaja con seis ciudades y cuatro variables meteorológicas: tempera
 | Scikit-learn | Entrenamiento y evaluación de modelos |
 | Random Forest | Modelos predictivos principales |
 | Regression Linear | Modelo baseline |
-| Isolation Forest | Detección de anomalías |
+| Isolation Forest | Detección de anomalías, si se utiliza en la implementación |
 | Supabase / PostgreSQL | Almacenamiento de datos |
 | Streamlit | Interfaz web |
 | Matplotlib / Plotly | Visualización de datos |
@@ -197,7 +196,7 @@ Esta comparación evidencia que un modelo más complejo no necesariamente ofrece
 
 El proyecto incorpora un módulo adicional para identificar comportamientos meteorológicos inusuales respecto a los patrones históricos de cada ciudad.
 
-La detección se realiza mediante el modelo Isolation forest, se enfoca principalmente en temperaturas significativamente superiores o inferiores a las habituales.
+La detección se enfoca principalmente mediante el modelo Isolation Forest, en temperaturas significativamente superiores o inferiores a las habituales.
 
 El objetivo es identificar situaciones como:
 
@@ -266,7 +265,7 @@ El archivo `.env` debe permanecer fuera de GitHub. Se recomienda incluirlo en `.
 
 ```bash
 git clone URL_DEL_REPOSITORIO
-cd Climatool-project
+cd Weather-Project
 ```
 
 ### 10.2. Crear un entorno virtual
@@ -282,61 +281,11 @@ Activarlo en Windows PowerShell:
 ```
 
 ### 10.3. Instalar dependencias
-=======
-# ClimaTool – Weather Forecasting & Anomaly Detection
-
-Sistema de pronóstico meteorológico basado en Machine Learning, desarrollado con Python, Scikit-learn, Supabase y Streamlit. Integra ingeniería de datos, modelos predictivos y detección de anomalías para analizar el comportamiento meteorológico de seis ciudades.
-
-## Funcionalidades principales
-
-- **Pronóstico meteorológico:** cuatro modelos Random Forest independientes para temperatura, humedad, velocidad del viento y presión atmosférica.
-- **Comparación de modelos:** evaluación frente a dos modelos baseline: Persistencia (Lag-1) y Regresión Lineal.
-- **Detección de anomalías:** identificación de temperaturas inusualmente altas o bajas respecto al comportamiento histórico.
-- **Dashboard interactivo:** visualización de condiciones actuales, pronóstico semanal, gráficos de temperatura y anomalías.
-- **Ingeniería de datos:** proceso ETL para recopilar, transformar y almacenar aproximadamente dos años de información meteorológica histórica.
-
-## Tecnologías
-
-Python · Pandas · NumPy · Scikit-learn · Random Forest · Supabase · PostgreSQL · Streamlit · Open-Meteo API
-
-## Evaluación de modelos
-
-Resultados obtenidos para New York sobre el 20 % final de los datos, reservado para evaluación:
-
-| Variable | Modelo | MAE | RMSE |
-|---|---|---:|---:|
-| Temperatura | Random Forest | 0.48 °C | 0.73 °C |
-| Humedad | Random Forest | 2.70 % | 3.87 % |
-| Viento | Random Forest | 1.49 km/h | 2.09 km/h |
-| Presión | Random Forest | 0.32 hPa | 0.43 hPa |
-
-Los modelos se compararon con Persistencia (Lag-1) y Regresión Lineal. Random Forest obtuvo mejores resultados en temperatura y humedad, mientras que Regresión Lineal presentó mejores resultados en viento y presión.
-
-## Ciudades analizadas
-
-New York · Miami · Los Angeles · Paris · Toulouse · Lyon
-
-## Arquitectura general
-
-**Open-Meteo API → ETL → Supabase / PostgreSQL → Machine Learning → Streamlit Dashboard**
-
-## Ejecución
-
-```bash
-git clone https://github.com/USUARIO/climatool-project.git
-cd climatool-project
-
-python -m venv .venv
-```
-
-Activar el entorno virtual e instalar dependencias:
->>>>>>> 7e95678dca67f0fcd70d63956c87d87f590b2d61
 
 ```bash
 python -m pip install -r src/requirements.txt
 ```
 
-<<<<<<< HEAD
 ### 10.4. Configurar las variables de entorno
 
 Crear el archivo `.env` con las credenciales de Supabase y comprobar que `db.py` pueda leerlo correctamente.
@@ -344,15 +293,11 @@ Crear el archivo `.env` con las credenciales de Supabase y comprobar que `db.py`
 ### 10.5. Ejecutar la interfaz
 
 Desde la raíz del proyecto:
-=======
-Configurar las credenciales de Supabase en el archivo `.env` y ejecutar:
->>>>>>> 7e95678dca67f0fcd70d63956c87d87f590b2d61
 
 ```bash
 python -m streamlit run src/interface.py
 ```
 
-<<<<<<< HEAD
 La aplicación estará disponible normalmente en:
 
 ```text
@@ -383,15 +328,6 @@ http://localhost:8501
 
 ## Autor
 
-Ronaldo Paredes como Proyecto personal de portafolio enfocado en ingeniería de datos, Machine Learning, Análisis de datos, análisis meteorológico.
+Ronaldo Paredes - Proyecto personal de portafolio enfocado en ingeniería de datos, Machine Learning y análisis meteorológico.
 
 **Áreas aplicadas:** Data Engineering · ETL · Machine Learning · Predictive Modeling · Anomaly Detection · Data Visualization.
-=======
-## Documentación
-
-Para conocer en detalle la arquitectura, el proceso ETL, el entrenamiento, la evaluación y la configuración, consulta las secciones de este README o la documentación complementaria del proyecto.
-
-## Autor
-
-Ronaldo Paredes - Proyecto personal de portafolio enfocado en Ingeniería de Datos, Machine Learning y análisis meteorológico.
->>>>>>> 7e95678dca67f0fcd70d63956c87d87f590b2d61
